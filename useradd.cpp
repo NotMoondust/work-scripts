@@ -7,7 +7,7 @@ int main() {
     std::cout << "Enter the username to create: ";
     std::cin >> username;
 
-    std::string command = "sudo useradd " + username;
+    std::string command = "sudo dscl . -create /Users/" + username;
     int result = system(command.c_str());
 
     if (result == 0) {
